@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import streamlit as st
 
 # Load the dataset
 df = pd.read_csv('Walking-Cycling.csv')
@@ -7,14 +9,13 @@ df = pd.read_csv('Walking-Cycling.csv')
 # Display the first few rows of the dataset
 #print(df.head())
 
-# Display the bar chart of the dataset
-import matplotlib.pyplot as plt
-import numpy as np
-import streamlit as st
-
 # Streamlit app
 st.title("Walking and Cycling Data Analysis")
 st.header("This app analyzes the Walking and Cycling dataset.")
+#sidebar
+st.sidebar.title("This app allows you to visualize the Walking and Cycling dataset.")
+st.sidebar.image("https://www.oxford.gov.uk/download/downloads/id/1030/walking_and_cycling_strategy_2015-2031.pdf", caption="Walking and Cycling Strategy 2015-2031")
+st.sidebar.write("This dataset contains information about walking and cycling in different areas.")
 
 import plotly.express as px
 #Bar chart of the dataset
