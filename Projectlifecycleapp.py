@@ -15,7 +15,7 @@ st.sidebar.write("This dataset contains information about walking and cycling sc
 
 #Bar chart of the dataset
 #Histogram of walking data
-st.marksdown("Histograms for distribution and basic sight")
+st.markdown("Histograms for distribution and basic sight")
 df['Walking']=df['Walking_%']
 walking_hist = px.histogram(df, x='Walking', title='Walking Percentage',color_discrete_sequence=['blue'])
 walking_hist.update_layout(yaxis_title_text='Number of areas', xaxis_title_text='Walking Percentage') 
