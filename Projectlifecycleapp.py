@@ -9,13 +9,17 @@ df = pd.read_csv('Walking-Cycling.csv')
 # Display the first few rows of the dataset
 #print(df.head())
 
-# Streamlit app
+#Streamlit app
 st.title("Walking and Cycling Data Analysis")
 st.header("This app analyzes the Walking and Cycling dataset.")
+
 #sidebar
-st.sidebar.title("This app allows you to visualize the Walking and Cycling dataset.")
-st.sidebar.image("https://www.oxford.gov.uk/download/downloads/id/1030/walking_and_cycling_strategy_2015-2031.pdf", caption="Walking and Cycling Strategy 2015-2031")
-st.sidebar.write("This dataset contains information about walking and cycling in different areas.")
+#from streamlit_option_menu import option_menu
+#with st.sidebar:
+#    selected = option_menu("Main Menu", ["Home", "Dataset", "About"],
+#        icons=['house', 'file-earmark-text', 'info-circle'], menu_icon="cast", default_index=0)
+st.sidebar.header("choose your different options.")
+st.sidebar.write("This dataset contains information about walking and cycling in different areas from 2010 to 2017.")
 
 import plotly.express as px
 #Bar chart of the dataset
